@@ -1,0 +1,683 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.img {
+    background-image: url(images/test3.jpg);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black color with 50% opacity */
+    z-index: 1; /* Place the overlay above the image */
+}
+
+.wrapper {
+    margin: 0;
+    position: relative;
+    max-width: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: #800000;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header img {
+    height: 45px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    align-items: center;
+}
+
+ul li a img {
+    height: 25px;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul li a {
+    color: #fff;
+    font-family: 'Cinzel';
+    font-size: 0.8rem;
+}
+
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+
+.maintext {
+    height: 89vh;
+    width: 60%;
+    padding: 1em 2em 10em;
+    position: relative;
+}
+
+.maintext h1 {
+    font-size: 2.3rem;
+    font-family: 'Cinzel';
+    color: #fff;
+}
+
+.textdiv {
+    margin-top: 5rem;
+    padding-left: 10vw;
+}
+
+.qc {
+    text-decoration: underline;
+    text-decoration-color: #800000;
+    text-decoration-thickness: 5px;
+}
+
+.textdiv p {
+    margin-top: 1em;
+    margin-bottom: 5rem;
+    font-weight: 400;
+    color: rgb(218, 218, 218);
+    font-size: 1.2rem;
+}
+
+.mainbtn, .card-text button {
+    color: #800000 !important;
+    text-transform: uppercase;
+    background: #ffffff;
+    padding: 20px;
+    border: 4px solid #800000 !important;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+}
+
+.mainbtn:hover, .card-text button:hover {
+    color: #494949 !important;
+    border-radius: 50px;
+    border-color: #494949 !important;
+    transition: all 0.3s ease 0s;
+}
+
+
+.card-text button {
+    position: absolute;
+    bottom: 10%;
+}
+
+
+
+
+.card-section {
+    z-index: 0;
+    position: relative;
+    top: -85px;
+   width: 100%;
+}
+
+.cardcontainer {
+    position: relative;
+   display: flex;
+}
+
+
+.card {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 550px;
+    transition: opacity 0.5 ease;
+    position: relative;
+}
+
+.card:hover {
+    opacity: 0.7;
+}
+
+.card img {
+    height: 60px;
+    width: 60px;
+    z-index: 2;
+    position: absolute;
+    top: 15%;
+}
+
+
+.card1 {
+    clip-path: polygon(0 0, 100% 11%, 100% 100%, 0% 100%);
+    position: relative;
+    background-image: url(images/test2.jpg);
+    background-position: bottom center;
+    background-size: cover;
+   
+}
+
+
+.card2 {
+    clip-path: polygon(0 11%, 100% 11%, 100% 100%, 0% 100%);
+    position: relative;
+    background-color: orangered;
+    background-image: url(images/puppy.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.card3 {
+    clip-path: polygon(0 11%, 100% 11%, 100% 100%, 0% 100%);
+    position: relative;
+    background-color: orangered;
+    background-image: url(images/test1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   
+}
+
+.card4 {
+    clip-path: polygon(0 11%, 100% 0, 100% 100%, 0% 100%);
+   position: relative;
+    background-image: url(images/test5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card1::before, .card2::before, .card3::before, .card4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(128, 0, 0, 0.5); /* Maroon color with 50% opacity */
+    z-index: 1; /* Place the overlay above the image */
+    border-radius: 5px; /* Match the border-radius of the card */
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+    color: #fff;
+}
+
+.card-text h1 {
+    margin-top: 1em;
+    position: absolute;
+    top: 130px;
+}
+
+.line {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    width: 150px;
+    border-top: 1px solid #fff;
+    position: absolute;
+    top: 200px;
+}
+
+.card-text p {
+    font-size: 1.1rem;
+    margin-bottom: 2em;
+}
+
+
+/* third */ 
+
+.thirdcon {
+    position: relative;
+    top: -87px;
+}
+
+.slogan {
+    width: 100%;
+    background-color: #ffa927;
+    padding: 2rem;
+}
+
+.slogan h1 {
+    /* font-family: 'Cinzel'; */
+    text-align: center;
+    color: #000;
+}
+
+.newscontainer {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsimg {
+    position: relative;
+}
+
+.newsimg img {
+    height: 300px;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    transition: opacity 0.5s ease;
+    
+}
+
+#latestnews{
+    margin: 2rem;
+    font-size: 2rem;
+}
+
+.newsimg img:hover {
+    opacity: 0.7;
+}
+
+.news h1 {
+    /* font-family: 'Cinzel'; */
+    /* padding: 1rem; */
+    margin-bottom: 1rem;
+}
+
+.news1text {
+    width: 50%;
+}
+
+.news1text p {
+    color: gray;
+}
+
+.news1text h1:hover, .news2text h1:hover{
+    text-decoration: underline;
+}
+
+/* Footer */
+footer{
+        margin-top: 5rem;
+        padding-top: 50px;
+    }
+    .container{
+        width: 1140px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+    .footer-content{
+        width: 33.3%;
+    }
+    h3{
+        font-size: 28px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .footer-content p{
+        width:190px;
+        margin: auto;
+        padding: 7px;
+    }
+    .footer-content ul{
+        text-align: center;
+    }
+    .list{
+        padding: 0;
+    }
+    .list li{
+        width: auto;
+        text-align: center;
+        list-style-type:none;
+        padding: 7px;
+        position: relative;
+        text-decoration: none;
+    }
+    .list li::before{
+        content: '';
+        position: absolute;
+        transform: translate(-50%,-50%);
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height: 2px;
+        background: #800000;
+        transition-duration: .5s;
+    }
+    .list li:hover::before{
+        width: 70px;
+    }
+    .social-icons{
+        text-align: center;
+        padding: 0;
+    }
+    .social-icons li{
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
+    }
+    .social-icons i{
+        color: #000;
+        font-size: 25px;
+    }
+    a{
+        text-decoration: none;
+        color: #000;
+    }
+    a.link:hover{
+        color: #800000;
+    }
+    .social-icons i:hover{
+        color: #800000;
+    }
+    .bottom-bar{
+        background: #800000;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 50px;
+    }
+    .bottom-bar p{
+        color: #343434;
+        margin: 0;
+        font-size: 16px;
+        padding: 7px;
+    }
+
+
+
+    /* Responsiveness*/
+
+
+    @media (max-width: 568px) {
+
+
+        .maintext {
+            padding: 1em;
+          }
+          .textdiv {
+            padding-left: 2vw;
+            margin-top: 2rem;
+          }
+          .maintext .textdiv h1 {
+            font-size: 1.5rem;
+          }
+          .maintext .textdiv p {
+            font-size: 1rem;
+          }
+          .mainbtn {
+            padding: 12px;
+          }
+          
+
+    }
+
+    @media  (max-width: 962px) {
+        
+        .container {
+            width: 100%;
+            padding: 0 20px; 
+          }
+
+          
+        .maintext {
+            height: 89vh;
+            width: 70%;
+            padding: 1em 2em 10em;
+            position: relative;
+        }
+
+        .maintext h1 {
+            font-size: 2rem;
+        }
+
+          .textdiv p {
+            margin-top: 1em;
+            margin-bottom: 5rem;
+            font-weight: 400;
+            color: rgb(218, 218, 218);
+            font-size: 1rem;
+        }
+
+          .footer-content {
+            width: 100%;
+            text-align: center; 
+          }
+    
+          .footer-content h3 {
+            font-size: 1.3rem;
+          }
+    
+          .footer-content p {
+            font-size: .8rem;
+          }
+    
+          .list li::before {
+            width: 0; 
+          }
+
+        .cardcontainer {
+            flex-wrap: wrap;
+          }
+          .card {
+            width: 50%;
+          }
+
+          .card3,.card4 {
+            clip-path: none;
+        }
+
+        .slogan h1 {
+            font-size: 1.5rem;
+        }
+
+        .news h1 {
+            font-size: 1.3rem;
+        }
+
+        .newscontainer {
+            padding: 1rem;
+        }
+
+        .newsimg img {
+            height: 250px;
+        }
+
+    }
+
+
+    @media (max-width: 768px) {
+
+        header {
+            align-items: center;
+        }
+
+        
+        .maintext {
+            height: 89vh;
+            width: 100%;
+            padding: 1em 2em 10em;
+            position: relative;
+        }
+
+        
+        .hamburger {
+        display: block;
+        }
+
+        .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+        }
+
+    
+        .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        }
+
+        .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        }
+
+        .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #800000;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        }
+
+        .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #800000;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        }
+
+        .nav-item {
+        margin: 16px 0;
+        }
+
+        .nav-menu.active {
+        left: 0;
+        }
+
+
+
+
+        .maintext h1 {
+            font-size: 1.6rem;
+            margin-bottom: 1.7rem;
+        }
+
+        .maintext p {
+            font-size: 1.3rem;
+        }
+
+        .maintext button {
+            padding: 15px;
+            font-size: 0.7rem;
+        }
+
+        .cardcontainer, .newscontainer {
+          flex-direction: column;
+          position: relative;
+          margin: 0;
+          padding: 0;
+        }
+        .card {
+          margin: 0;
+          padding: 0.7rem;
+          width: 100%;
+        }
+        .card img {
+            margin-top: 0;
+        }
+
+        .card-text h1 {
+            font-size: 1.3rem;
+        }
+        
+        .card-text p {
+            font-size: 0.9rem
+        }
+
+        .card-text button {
+            padding: 10px;
+        }
+
+        .card1,.card2,.card3,.card4 {
+            clip-path: none;
+        }
+
+        .slogan h1{
+            font-size: 1.5rem;
+        }
+        
+        .news h1{
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .news1text, .news2text {
+            margin: 1.5rem;
+        }
+
+        .newsimg img {
+            height: 200px;
+        }
+      }
+
+      @media (max-width: 1280px) {
+        .newscontainer {
+            padding: 2rem;
+        }
+        
+      }
+
+
+      @media (max-width: 400px) {
+        .newscontainer img {
+            padding: 1rem 0rem;
+        }
+        
+      }
